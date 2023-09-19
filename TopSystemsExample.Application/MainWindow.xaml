@@ -1,0 +1,21 @@
+﻿<Window x:Class="TopSystemsExample.Application.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:vm="clr-namespace:TopSystemsExample.Application.ViewModels"
+        xmlns:v="clr-namespace:TopSystemsExample.Application.Views"
+        xmlns:local="clr-namespace:TopSystemsExample.Application"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+		<ContentControl Content="{Binding ViewContent}">
+			<ContentControl.Resources>
+				<DataTemplate DataType="{x:Type vm:FiguresViewModel}">
+					<v:FiguresView/>
+				</DataTemplate>
+			</ContentControl.Resources>
+			
+		</ContentControl>
+    </Grid>
+</Window>
